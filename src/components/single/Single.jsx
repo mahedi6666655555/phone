@@ -1,6 +1,10 @@
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// here is font asweom import
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+// here is font asweom import  ends
 const Single = (props) => {
   let { brand, image, phone_name } = props.Single;
   //   console.log(phone_name);
@@ -18,9 +22,7 @@ const Single = (props) => {
         <h6 className="text-lg font-bold pt-3 pb-2">{brand}</h6>
         <h1 className="text-lg font-bold pb-2">{phone_name}</h1>
         <div>
-          <button onClick={mahedi} className="border-b-2">
-            add to cart
-          </button>
+          <button onClick={mahedi} className="border-b-2">add to cart <FontAwesomeIcon className="pl-2" icon={faCoffee} /></button>
         </div>
       </div>
       <ToastContainer></ToastContainer>
